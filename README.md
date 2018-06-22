@@ -4,5 +4,5 @@ ___
 
  <img src="https://github.com/BiggaHD/DevConnector/blob/master/stack.png" height="450" width="600">
 
-> ##### This is a work in process, and as I go along I'll update instructions.
+> ##### It's a work in process, and as I go along I'll update instructions.
 ___
