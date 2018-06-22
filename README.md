@@ -3,5 +3,3 @@ ___
 ___
 > >
 > > <img src="https://github.com/BiggaHD/DevConnector/blob/master/stack.svg" height="450" width="600">
-
-> ##### This is a work in process, and as I go along I'll update instructions. Currently working on the frontend.
