@@ -12,9 +12,6 @@ class Login extends Component {
       password: '',
       errors: {}
     };
-
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -33,7 +30,7 @@ class Login extends Component {
     }
   }
 
-  onSubmit(e) {
+  onSubmit = e => {
     e.preventDefault();
 
     const userData = {
@@ -44,7 +41,7 @@ class Login extends Component {
     this.props.loginUser(userData);
   }
 
-  onChange(e) {
+  onChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   }
 
@@ -58,7 +55,7 @@ class Login extends Component {
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Log In</h1>
               <p className="lead text-center">
-                Sign in to your DevConnector account
+                Sign in to your Dev_Nexup account
               </p>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup

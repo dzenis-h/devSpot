@@ -4,9 +4,9 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const path = require('path');
 
-const users = require('./api/users');
-const profile = require('./api/profile');
-const posts = require('./api/posts');
+const users = require('./routes/api/users');
+const profile = require('./routes/api/profile');
+const posts = require('./routes/api/posts');
 
 const app = express();
 
@@ -19,7 +19,7 @@ const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
-  .connect(db)
+  .connect(db, { useNewUrlParser: true })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
@@ -30,9 +30,9 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 // Use Routes
-app.use('/users', users);
-app.use('/profile', profile);
-app.use('/posts', posts);
+app.use('/api/users', users);
+app.use('/api/profile', profile);
+app.use('/api/posts', posts);
 
 // Server static assets if in production
 if (process.env.NODE_ENV === 'production') {
