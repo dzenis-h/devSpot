@@ -1,6 +1,0 @@
-{
-    "mongoURI": "YOUR MONGO URI GOES HERE",
-    "jwtSecret": "blah blah blah - PUT SOMETHING HERE FOR THE HASH",
-    "githubClientId": "GO TO --> https://github.com/settings/developers",
-    "githubSecret": "GO TO --> https://github.com/settings/developers"
-  }

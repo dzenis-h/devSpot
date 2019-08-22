@@ -1,7 +1,6 @@
 const express = require("express");
 const request = require("request");
-const githubClientId = require("../../config/keys").githubClientId;
-const githubSecret = require("../../config/keys").githubSecret;
+const keys = require("../../config/keys");
 
 const router = express.Router();
 const auth = require("../../middleware/auth");
@@ -218,29 +217,6 @@ router.put(
   }
 );
 
-// @route    DELETE api/profile/experience/:exp_id
-// @desc     Delete experience from profile
-// @access   Private
-// router.delete('/experience/:exp_id', auth, async (req, res) => {
-//   try {
-//     const profile = await Profile.findOne({ user: req.user.id });
-
-//     // Get remove index
-//     const removeIndex = profile.experience
-//       .map(item => item.id)
-//       .indexOf(req.params.exp_id);
-
-//     profile.experience.splice(removeIndex, 1);
-
-//     await profile.save();
-
-//     res.json(profile);
-//   } catch (err) {
-//     console.error(err.message);
-//     res.status(500).send('Server Error');
-//   }
-// });
-
 router.delete("/experience/:exp_id", auth, async (req, res) => {
   try {
     const foundProfile = await Profile.findOne({ user: req.user.id });
@@ -328,30 +304,6 @@ router.put(
   }
 );
 
-// @route    DELETE api/profile/education/:edu_id
-// @desc     Delete education from profile
-// @access   Private
-//router.delete('/education/:edu_id', auth, async (req, res) => {
-//try {
-//const profile = await Profile.findOne({ user: req.user.id });
-
-// Get remove index
-//const removeIndex = profile.education
-//.map(item => item.id)
-//.indexOf(req.params.edu_id);
-/*
-    profile.education.splice(removeIndex, 1);
-
-    await profile.save();
-
-    res.json(profile);
-  } catch (err) {
-    console.error(err.message);
-    res.status(500).send('Server Error');
-  }
-});
-*/
-
 router.delete("/education/:edu_id", auth, async (req, res) => {
   try {
     const foundProfile = await Profile.findOne({ user: req.user.id });
@@ -361,15 +313,7 @@ router.delete("/education/:edu_id", auth, async (req, res) => {
     if (removeIndex === -1) {
       return res.status(500).json({ msg: "Server error" });
     } else {
-      // theses console logs helped me figure it out
-      /*   console.log("eduIds", eduIds);
-      console.log("typeof eduIds", typeof eduIds);
-      console.log("req.params", req.params);
-      console.log("removed", eduIds.indexOf(req.params.edu_id));
- */ foundProfile.education.splice(
-        removeIndex,
-        1
-      );
+      foundProfile.education.splice(removeIndex, 1);
       await foundProfile.save();
       return res.status(200).json(foundProfile);
     }
@@ -386,7 +330,9 @@ router.get("/github/:username", (req, res) => {
     const options = {
       uri: `https://api.github.com/users/${
         req.params.username
-      }/repos?per_page=5&sort=created:asc&client_id=${githubClientId}&client_secret=${githubSecret}`,
+      }/repos?per_page=5&sort=created:asc&client_id=${
+        keys.githubClientId
+      }&client_secret=${keys.githubSecret}`,
       method: "GET",
       headers: { "user-agent": "node.js" }
     };
