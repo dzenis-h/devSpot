@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const auth = require("../../middleware/auth");
 const jwt = require("jsonwebtoken");
 const { check, validationResult } = require("express-validator/check");
-const jwtSecret = require("./keys").jwtSecret;
+const jwtSecret = require("../../config/keys).jwtSecret;
 
 const User = require("../../models/User");
 

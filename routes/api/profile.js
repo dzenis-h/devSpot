@@ -1,7 +1,7 @@
 const express = require("express");
 const request = require("request");
-const githubClientId = require("config").githubClientId;
-const githubSecret = require("config").githubSecret;
+const githubClientId = require("../../config/keys").githubClientId;
+const githubSecret = require("../../config/keys").githubSecret;
 
 const router = express.Router();
 const auth = require("../../middleware/auth");
