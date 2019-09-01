@@ -4,7 +4,7 @@ const path = require("path");
 const http = require("http");
 
 setInterval(function() {
-  http.get("https://devspot.herokuapp.com/");
+  http.get("http://devspot.herokuapp.com/");
 }, 300000); // every 5 minutes (300000)
 
 const app = express();
