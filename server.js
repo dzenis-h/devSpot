@@ -1,11 +1,6 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const path = require("path");
-const http = require("http");
-
-setInterval(function() {
-  http.get("http://devspot.herokuapp.com/");
-}, 300000); // every 5 minutes (300000)
 
 const app = express();
 
