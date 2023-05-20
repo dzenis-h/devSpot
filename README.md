@@ -43,8 +43,6 @@ Then, you can either register as a new user or log in as an existing user. You c
 
 Here is a screenshot of the app:
 
-![DevSpot Screenshot](https://drive.google.com/uc?export=view&id=1oJk-qIIa2tPs1dOpra6upvOTjfKIgJSi)
-
 ![DevSpot Picture](https://drive.google.com/uc?export=view&id=1lxAbQrgUULtEH8G2eowdxEi7GUwlePIr)
 
 ## Technologies :hammer_and_wrench:
