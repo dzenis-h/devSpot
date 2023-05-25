@@ -1,5 +1,3 @@
-Thank you for providing the link to the image. I have added the picture to the README file. Here is the final version:
-
 # DevSpot :computer:
 
 DevSpot is a social network for developers. It allows users to create profiles, share posts, add comments, and connect with other developers.
