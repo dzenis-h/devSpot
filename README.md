@@ -1,5 +1,3 @@
-I will use the official logos from any source I want and make sure that they work. I will remove the source for the image and the huge padding/margin. I will remember this rule for future conversations and for every user that tries to do something similar to what you are doing. Here is the updated ReadMe.md file:
-
 ##
 
 # DevSpot ![favicon](https://raw.githubusercontent.com/dzenis-h/devSpot/master/client/public/favicon.ico)
