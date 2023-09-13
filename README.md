@@ -34,4 +34,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://do
 
 ## 📸 Screenshot
 
-![screenshot](https://drive.google.com/uc?export=view&id=1SF6c5p8EkGWPnRohapnGEUSvWO5AAt0U)
+![screenshot](https://drive.google.com/uc?export=view&id=1xh8pufGe6KnBKfFwLzj5Pm3TmBK5Uumv)
